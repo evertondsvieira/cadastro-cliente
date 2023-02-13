@@ -58,7 +58,7 @@ const LoginProvider = ({ children }: ILoginProviderProps) => {
         setUser(userResponse);
         toast.success("Login Realizado com sucesso!");
         setTimeout(function () {
-          navigate("/contact");
+          navigate("/contacts");
         }, 1000);
       })
       .catch((error) => toast.error("Ops! Algo deu errado!"));
