@@ -50,7 +50,7 @@ const LoginProvider = ({ children }: ILoginProviderProps) => {
 
   const signIn = async (data: IUser) => {
     await api
-      .post("/users/login/", data)
+      .post("users/login/", data)
       .then((response) => {
         const { user: userResponse, token } = response.data;
         api.defaults.headers.common.authorization = `Access ${token}`;
